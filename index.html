@@ -1,34 +1,88 @@
 <!DOCTYPE html>
 <html>
+
+<head>
     <link href="style.css" rel="stylesheet">
-    <head>
-        <link rel="icon" href="">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>
-            Natural Burial - Home
-        </title>
-        <meta charset="UTF-8">
-        <meta name="keywords" content="example 1">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natural Burial - Booking Form</title>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="natural burial, booking form">
+</head>
+
+<body>
+    <script src="script.js"></script>
     <header>
-        <h2>
-            <a href="index.html">
-                Home
-            </a>
-            <a href="More.html">
-                More
-            </a>
-        </h2>
+        <h2>Authors:</h2>
+        <ul>
+            <li>Group Leader: Prince Kelly</li>
+            <li>Bhanu Prakash</li>
+            <li>Kasi Ellis</li>
+            <li>Prajwal Shetty</li>
+        </ul>
     </header>
-    <body>
-        <p>Enter Your Name</p>
-        <form>
-            <input type="text" placeholder="John Doe">
+    <main>
+        <h1>Booking Form</h1>
+        <form action="submit.php" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                <label for="fullName">Full Name:</label>
+                <input type="text" id="fullName" name="fullName" required><img class="help" src="asssets/help.png"><br><br>
+                <label for="dob">Date of Birth:</label>
+                <input type="date" id="dob" name="dob" required><img class="help" src="asssets/help.png"><br><br>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><img class="help" src="asssets/help.png"><br><br>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required><img class="help" src="asssets/help.png"><br><br>
+                <label for="address">Address:</label>
+                <textarea id="address" name="address" required></textarea><img class="help" src="asssets/help.png"><br><br>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required><img class="help" src="asssets/help.png"><br><br>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required><img class="help" src="asssets/help.png"><br><br>
+                <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" name="zip" required><img class="help" src="asssets/help.png"><br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Natural Burial Preferences</legend>
+                <label for="burialMethod">Preferred Burial Method:</label>
+                <select id="burialMethod" name="burialMethod" required>
+                    <option value="default">Default</option>
+                    <option value="coralReef">Coral Reef</option>
+                    <option value="skyBurial">Sky Burial</option>
+                    <option value="seaBurial">Burial At Sea</option>
+                    <option value="treePod">Tree Pod</option>
+                </select><img class="help" src="asssets/help.png"><br><br>
+                <label for="graveMarker">Preferred Grave Site Marker:</label>
+                <select id="graveMarker" name="graveMarker" required>
+                    <option value="tree">Tree</option>
+                    <option value="rock">Rock</option>
+                    <option value="wildflower">Wildflower</option>
+                </select><img class="help" src="asssets/help.png"><br>
+                <p>Photo Examples:</p>
+                <img class="imgMark" onmouseover="bigImg(this)" onmouseout="normImg(this)" src="asssets/flower.jpeg" title="A burial marker that uses wild flowers as a signifier">
+                <img class="imgMark" onmouseover="bigImg(this)" onmouseout="normImg(this)" src="asssets/tree.jpeg" title="A burial marker that uses a tree or log as a signifier">
+                <img class="imgMark" onmouseover="bigImg(this)" onmouseout="normImg(this)" src="asssets/rock.jpeg" title="A burial marker that uses a large rock or boulder as a signifier">
+                <img class="help" src="asssets/help.png"><br><br>
+                <label for="enscript">Choose an Enscription for the Marker:</label>
+                <textarea id="enscript" name="enscript" required></textarea><img class="help" src="asssets/help.png"><br><br>
+                <label for="graveLocation">Preferred Grave Site Marker:</label>
+                <select id="graveLocation" name="graveLocation" required>
+                    //The href links should be implimented with java script when it is allowed
+                    <option value="burial1"><a href="http://oldburyingground.ca/">The Old Burial Ground</a></option>
+                    <option value="burial2"><a href="https://www.sunriseparkinterfaithcemetery.ca/">Sunrise Park Inter-faith Cemetery</a></option>
+                    <option value="burial3"><a href="http://holycrosshalifax.ca/">Holy Cross Cemetery</a></option>
+                </select><img class="help" src="asssets/help.png"><br><br>
+                <label for="plotSize">Preferred Plot Size:</label>
+                <input type="number" id="plotSize" name="plotSize" min="1" required> square feet<img class="help" src="asssets/help.png"><br><br>
+                <label for="additionalInfo">Additional Information:</label>
+                <textarea id="additionalInfo" name="additionalInfo"></textarea><img class="help" src="asssets/help.png"><br><br>
+            </fieldset>
+            <input type="submit" value="Submit">
         </form>
-        <p>Enter Date of Birth</p>
-        <form>
-            <input type="date">
-        </form>
-    </body>
+    </main>
+    <footer>
+        <p>&copy; 2024 Natural Burial Society. All rights reserved.</p>
+    </footer>
+</body>
+
 </html>
