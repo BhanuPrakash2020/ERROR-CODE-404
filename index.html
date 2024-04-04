@@ -2,8 +2,8 @@
 <html>
 
 <head>
-    <!-- Including external stylesheet -->
-    <link href="style.css" rel="stylesheet">
+    <!-- Including Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Setting the title and character encoding -->
     <title>Natural Burial - Booking Form</title>
@@ -11,15 +11,14 @@
     <meta name="keywords" content="natural burial, booking form">
 </head>
 
-<body>
-    <!-- Including external JavaScript file -->
+<body class="bg-gray-100 dark:bg-gray-800 text-black dark:text-white">
     <script src="script.js"></script>
     <!-- Header section -->
-    <header>
+    <header class="p-4">
         <!-- Title for authors -->
-        <h2>Authors:</h2>
+        <h2 class="text-2xl font-bold">Authors:</h2>
         <!-- List of authors -->
-        <ul>
+        <ul class="mt-4">
             <!-- Group Leader -->
             <li>Group Leader: Prince Kelly</li>
             <!-- Other group members -->
@@ -27,95 +26,117 @@
             <li>Kasi Ellis</li>
             <li>Prajwal Shetty</li>
         </ul>
-        <button id="bgToggle" onclick="toggleBackgroundColor()">Toggle Dark Mode</button>
     </header>
     <!-- Main content section -->
-    <main>
+    <main class="p-4">
         <!-- Main heading -->
-        <h1>Booking Form</h1>
+        <h1 class="text-4xl font-bold">Booking Form</h1>
         <!-- Form for user input -->
         <form action="submit.php" method="POST">
             <!-- Fieldset for personal information -->
-            <fieldset>
+            <fieldset class="mb-4">
                 <!-- Legend for personal information -->
-                <legend>Personal Information</legend>
+                <legend class="text-6xl font-bold mb-2">Personal Information</legend>
                 <!-- Input field for full name -->
-                <label for="fullName">Full Name:</label><br>
-                <input type="text" id="fullName" name="fullName" required><img class="help" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your Full Name.mp3')"><br><br>
+                <label for="fullName" class="block text-6xl">Full Name:</label><br>
+                <input type="text" id="fullName" name="fullName" required
+                       class="w-full px-4 py-2 border border-black rounded-md mb-2 text-6xl"><img class="help h-36 w-36"
+                                                                                                  src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your Full Name.mp3')"><br><br>
                 <!-- Input field for date of birth -->
-                <label for="dob">Date of Birth:</label><br>
-                <input type="date" id="dob" name="dob" required><img class="help" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your Date of birth.mp3')"><br><br>
+                <label for="dob" class="block text-6xl">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required
+                       class="w-full px-4 py-2 border border-black rounded-md mb-2 text-6xl"><img class="help h-36 w-36"
+                                                                                                  src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your Date of birth.mp3')"><br><br>
                 <!-- Input field for email -->
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email" required><img class="help" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your Email.mp3')"><br><br>
+                <label for="email" class="block text-6xl">Email:</label><br>
+                <input type="email" id="email" name="email" required
+                       class="w-full px-4 py-2 border border-black rounded-md mb-2 text-6xl"><img class="help h-36 w-36"
+                                                                                                  src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your Email.mp3')"><br><br>
                 <!-- Input field for phone number -->
-                <label for="phone">Phone Number:</label><br>
-                <input type="tel" id="phone" name="phone" required><img class="help" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your Phone Number.mp3')"><br><br>
+                <label for="phone" class="block text-6xl">Phone Number:</label><br>
+                <input type="tel" id="phone" name="phone" required
+                       class="w-full px-4 py-2 border border-black rounded-md mb-2 text-6xl"><img class="help h-36 w-36"
+                                                                                                  src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your Phone Number.mp3')"><br><br>
                 <!-- Textarea for address -->
-                <label for="address">Address:</label><br>
-                <textarea id="address" name="address" required></textarea><img class="help" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your Address.mp3')"><br><br>
+                <label for="address" class="block text-6xl">Address:</label><br>
+                <textarea id="address" name="address" required
+                          class="w-full px-4 py-2 border border-black rounded-md mb-2"></textarea><img class="help h-36 w-36"
+                                                                                                       src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your Address.mp3')"><br><br>
                 <!-- Input field for city -->
-                <label for="city">City:</label><br>
-                <input type="text" id="city" name="city" required><img class="help" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your City.mp3')"><br><br>
+                <label for="city" class="block text-6xl">City:</label><br>
+                <input type="text" id="city" name="city" required
+                       class="w-full px-4 py-2 border border-black rounded-md mb-2 text-6xl"><img class="help h-36 w-36"
+                                                                                                  src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your City.mp3')"><br><br>
                 <!-- Input field for state -->
-                <label for="state">State:</label><br>
-                <input type="text" id="state" name="state" required><img class="help" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your State .mp3')"><br><br>
+                <label for="state" class="block text-6xl">State:</label><br>
+                <input type="text" id="state" name="state" required
+                       class="w-full px-4 py-2 border border-black rounded-md mb-2 text-6xl"><img class="help h-36 w-36"
+                                                                                                  src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your State .mp3')"><br><br>
                 <!-- Input field for ZIP code -->
-                <label for="zip">ZIP Code:</label><br>
-                <input type="text" id="zip" name="zip" required><img class="help" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your ZIP code.mp3')"><br><br>
+                <label for="zip" class="block text-6xl">ZIP Code:</label><br>
+                <input type="text" id="zip" name="zip" required
+                       class="w-full px-4 py-2 border border-black rounded-md mb-2 text-6xl"><img class="help h-36 w-36"
+                                                                                                  src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter your ZIP code.mp3')"><br><br>
             </fieldset>
             <!-- Fieldset for natural burial preferences -->
-            <fieldset>
+            <fieldset class="mb-4">
                 <!-- Legend for burial preferences -->
-                <legend>Natural Burial Preferences</legend>
+                <legend class="text-6xl font-bold mb-2">Natural Burial Preferences</legend>
                 <!-- Radio buttons for preferred burial method -->
-                <div>
-                    <input type="radio" id="coralReef" name="burialMethod" value="coralReef" required>
-                    <label class="radio-label" for="coralReef">Coral Reef</label><br>
-                    <input type="radio" id="skyBurial" name="burialMethod" value="skyBurial" required>
-                    <label class="radio-label" for="skyBurial">Sky Burial</label><br>
-                    <input type="radio" id="seaBurial" name="burialMethod" value="seaBurial" required>
-                    <label class="radio-label" for="seaBurial">Burial At Sea</label><br>
-                    <input type="radio" id="treePod" name="burialMethod" value="treePod" required>
-                    <label class="radio-label" for="treePod">Tree Pod</label><br>
-                </div><img class="help" src="asssets/loud-speaker.png" onclick="playAudio()"><br><br>
+                <div class="mb-4">
+                    <input type="radio" id="coralReef" name="burialMethod" value="coralReef" required
+                           class="transform scale-75 mr-4">
+                    <label class="radio-label text-6xl" for="coralReef">Coral Reef</label><br>
+                    <input type="radio" id="skyBurial" name="burialMethod" value="skyBurial" required
+                           class="transform scale-75 mr-4">
+                    <label class="radio-label text-6xl" for="skyBurial">Sky Burial</label><br>
+                    <input type="radio" id="seaBurial" name="burialMethod" value="seaBurial" required
+                           class="transform scale-75 mr-4">
+                    <label class="radio-label text-6xl" for="seaBurial">Burial At Sea</label><br>
+                    <input type="radio" id="treePod" name="burialMethod" value="treePod" required
+                           class="transform scale-75 mr-4">
+                    <label class="radio-label text-6xl" for="treePod">Tree Pod</label><br>
+                </div><img class="help h-36 w-36" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Select your Preferred Burial Method.mp3')"><br><br>
                 <!-- Radio buttons for preferred grave site marker -->
-                <div>
-                    <input type="radio" id="tree" name="graveMarker" value="tree" required>
-                    <label class="radio-label" for="tree">Tree</label><br>
-                    <input type="radio" id="rock" name="graveMarker" value="rock" required>
-                    <label class="radio-label" for="rock">Rock</label><br>
-                    <input type="radio" id="wildflower" name="graveMarker" value="wildflower" required>
-                    <label class="radio-label" for="wildflower">Wildflower</label><br>
-                </div><img class="help" src="asssets/loud-speaker.png" onclick="playAudio()"><br>
+                <div class="mb-4">
+                    <input type="radio" id="tree" name="graveMarker" value="tree" required
+                           class="transform scale-75 mr-4">
+                    <label class="radio-label text-6xl" for="tree">Tree</label><br>
+                    <input type="radio" id="rock" name="graveMarker" value="rock" required
+                           class="transform scale-75 mr-4">
+                    <label class="radio-label text-6xl" for="rock">Rock</label><br>
+                    <input type="radio" id="wildflower" name="graveMarker" value="wildflower" required
+                           class="transform scale-75 mr-4">
+                    <label class="radio-label text-6xl" for="wildflower">Wildflower</label><br>
+                </div><img class="help h-36 w-36" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Select your Preferred Grave Site Marker.mp3')"><br>
                 <!-- Paragraph for photo examples of grave markers -->
-                <p>Photo Examples:</p>
+                <p class="text-6xl">Photo Examples:</p>
                 <!-- Images of different grave markers -->
-                <img class="imgMark" onmouseover="bigImg(this)" onmouseout="normImg(this)" src="asssets/tree.jpeg" title="A burial marker that uses a tree or log as a signifier">
-                <img class="imgMark" onmouseover="bigImg(this)" onmouseout="normImg(this)" src="asssets/rock.jpeg" title="A burial marker that uses a large rock or boulder as a signifier">
-                <img class="imgMark" onmouseover="bigImg(this)" onmouseout="normImg(this)" src="asssets/flower.jpeg" title="A burial marker that uses wild flowers as a signifier">
+                <img class="imgMark h-250 w-250" onmouseover="bigImg(this)" onmouseout="normImg(this)"
+                     src="asssets/tree.jpeg" title="A burial marker that uses a tree or log as a signifier">
+                <img class="imgMark h-250 w-250" onmouseover="bigImg(this)" onmouseout="normImg(this)"
+                     src="asssets/rock.jpeg" title="A burial marker that uses a large rock or boulder as a signifier">
+                <img class="imgMark h-250 w-250" onmouseover="bigImg(this)" onmouseout="normImg(this)"
+                     src="asssets/flower.jpeg" title="A burial marker that uses wild flowers as a signifier">
                 <br><br>
                 <!-- Textarea for choosing an inscription for the marker -->
-                <label for="enscript">Choose an Enscription for the Marker:</label><br>
-                <textarea id="enscript" name="enscript" required></textarea><img class="help" src="asssets/help.png" onclick="playAudio()"><br><br>
-                <!-- Radio buttons for preferred grave location -->
-                <div>
-                    <input type="radio" id="burial1" name="graveLocation" value="burial1" required>
-                    <label class="radio-label" for="burial1"><a href="http://oldburyingground.ca/" target="_blank">The Old Burial Ground</a></label><br>
-                    <input type="radio" id="burial2" name="graveLocation" value="burial2" required>
-                    <label class="radio-label" for="burial2"><a href="https://www.sunriseparkinterfaithcemetery.ca/" target="_blank">Sunrise Park Inter-faith Cemetery</a></label><br>
-                    <input type="radio" id="burial3" name="graveLocation" value="burial3" required>
-                    <label class="radio-label" for="burial3"><a href="http://holycrosshalifax.ca/" target="_blank">Holy Cross Cemetery</a></label><br>
-                </div><img class="help" src="aasssets/loud-speaker.png" onclick="playAudio()"><br><br>
+                <label for="enscript" class="block text-6xl">Choose an Enscription for the Marker:</label><br>
+                <textarea id="enscript" name="enscript" required
+                          class="w-full px-4 py-2 border border-black rounded-md mb-2 text-6xl"></textarea><img class="help h-36 w-36"
+                                                                                                       src="asssets/loud-speaker.png" onclick="playAudio('asssets/Choose an Enscription for the Marker.mp3')"><br><br>
                 <!-- Input field for preferred plot size -->
-                <label for="plotSize">Preferred Plot Size:</label><br>
-                <input type="number" id="plotSize" name="plotSize" min="1" required><a>square feet</a><img class="help" src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter Preferred Plot Size.mp3')"><br><br>
+                <label for="plotSize" class="block text-6xl">Preferred Plot Size:</label><br>
+                <input type="number" id="plotSize" name="plotSize" min="1" required
+                       class="w-full px-4 py-2 border border-black rounded-md mb-2 text-6xl"><a class="block text-6xl">square feet</a><img class="help h-36 w-36"
+                                                                                                                    src="asssets/loud-speaker.png" onclick="playAudio('asssets/Enter Preferred Plot Size.mp3')"><br><br>
                 <!-- Textarea for additional information -->
-                <label for="additionalInfo">Additional Information:</label><br>
-                <textarea id="additionalInfo" name="additionalInfo"></textarea><img class="help" src="asssets/loud-speaker.png" onclick="playAudio('asssets/( Additional Information).mp3')"><br><br>
+                <label for="additionalInfo" class="block text-6xl">Additional Information:</label><br>
+                <textarea id="additionalInfo" name="additionalInfo"
+                          class="w-full px-4 py-2 border border-black rounded-md mb-2 text-6xl"></textarea><img class="help h-36 w-36"
+                                                                                                       src="asssets/loud-speaker.png" onclick="playAudio('asssets/( Additional Information).mp3')"><br><br>
             </fieldset>
             <!-- Submit button for the form -->
-            <input type="submit" value=" Submit">
+            <input type="submit" value="Submit" class="px-4 py-2 bg-black text-white rounded-md">
         </form>
     </main>
 </body>
