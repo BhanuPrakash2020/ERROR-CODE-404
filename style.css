@@ -1,18 +1,50 @@
-a{
+label, input, p, option, select, textarea, a, legend, button{
     font-size: 72px;
+    font-family: "Timers New Roman", Times, serif;
 }
 .imgMark{
-    width: 130px;
-    height: 130px;
-}
-.imgMark:hover{
     width: 230px;
     height: 230px;
 }
-.help{
-    width: 20px;
-    height: 20px;
+.imgMark:hover{
+    width: 330px;
+    height: 330px;
 }
-section{
-    background-color: blue;
+.help{
+    padding-top: 0px;
+    width: 100px;
+    height: 100px;
+}
+/* Light Mode Styles */
+body {
+    background-color: #f0f0f0;
+}
+
+button {
+    background-color: #ffffff;
+    border: 1px solid #333333;
+}
+
+/* Dark Mode Styles */
+.dark-mode body {
+    background-color: #333333;
+    color: #ffffff;
+}
+
+.dark-mode button {
+    background-color: #444444;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+}
+input[type="radio"] {
+    transform: scale(3);
+    margin-right: 10px;
+    margin-left: 50px;
+}
+div {
+    display: flex;
+    align-items: center; /* Align items vertically */
+}
+.imgMark {
+    margin-left: 20px; /* Add margin to separate the images from the radio buttons */
 }
