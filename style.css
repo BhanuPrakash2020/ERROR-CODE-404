@@ -1,16 +1,15 @@
-
 label, input, p, option, select, textarea, a, legend, button{
     font-size: 72px;
     font-family: "Timers New Roman", Times, serif;
 }
-
 .imgMark{
-    width: 80%;
-    height: auto;
-    display: block;
-    margin: 0 auto;   
+    width: 230px;
+    height: 230px;
 }
-
+.imgMark:hover{
+    width: 330px;
+    height: 330px;
+}
 .help{
     padding-top: 0px;
     width: 100px;
@@ -21,34 +20,9 @@ body {
     background-color: #f0f0f0;
 }
 
-header{
-    background-color: cadetblue;
-}
-
-
-#bgToggle {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    z-index: 1000;
-    border-radius: 10px; /* Adjust the border-radius value to change the roundness */
-}
-
-
-.button {
+button {
     background-color: #ffffff;
     border: 1px solid #333333;
-}
-
-.background-image {
-    background-color: aquamarine;
-    background-size: cover;
-    background-position: center;
 }
 
 /* Dark Mode Styles */
@@ -62,13 +36,6 @@ header{
     color: #ffffff;
     border: 1px solid #ffffff;
 }
-
-fieldset .dark-mode{
-    background-color: #333333;
-    color: #ffffff; 
-}
-
-
 input[type="radio"] {
     transform: scale(3);
     margin-right: 10px;
@@ -78,14 +45,6 @@ div {
     display: flex;
     align-items: center; /* Align items vertically */
 }
-
-#submit{
-    background-color: aquamarine;
+.imgMark {
+    margin-left: 20px; /* Add margin to separate the images from the radio buttons */
 }
-
-
-
-
-
-
-
