@@ -1,0 +1,82 @@
+<!-- 
+    This is the starting page of the website, providing navigation options for users.
+    It includes links to all major sections and features of the website.
+    The page is designed to be visually appealing and easy to navigate, with a clear hierarchy of information.
+    The most important information is placed at the top.
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Link to Tailwind CSS and custom stylesheet -->
+        <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="./style.css">
+
+        <!-- Link to custom JavaScript file -->
+        <script src="./script.js"></script>
+    </head>
+    <body class="bg-gray-100">
+        <!-- 
+            Background image for the page, with a fixed position and cover size.
+            The image is centered both vertically and horizontally.
+        -->
+        <div class="bg-fixed bg-cover bg-center h-screen"
+            style="background-image: url('./asssets/starting homepage1.jpg');">
+
+            <!-- 
+                Button for playing a message for Mary Ann.
+                The button is positioned absolutely at the bottom of the page,
+                with a width of 100% and a height of 50%.
+                The button has a blue background color, with white text and a bold font.
+                The button has a hover effect, changing the background color to a darker blue.
+                The button has a rounded border.
+                The button has an ID of "play", which is used to trigger the play() function.
+            -->
+            <div class="absolute inset-x-0 bottom-30 flex items-center justify-center" class="button">
+                <button  class="w-100 h-50 bg-blue-800 hover:bg-blue-800 text-white font-bold text-7xl leading-relaxed rounded-xl inline-block" onclick="play()"  id="play">
+                    Message for Mary Ann
+                </button>
+            </div>
+
+            <!-- 
+                Button for reserving a spot.
+                The button is positioned absolutely at the bottom of the page,
+                with a width of 100% and a height of 50%.
+                The button has a blue background color, with white text and a bold font.
+                The button has a hover effect, changing the background color to a darker blue.
+                The button has a rounded border.
+                The button has an ID of "home", which is used to link to the form page.
+            -->
+            <div class="absolute inset-x-0 bottom-0 flex items-center justify-center" class="button">
+                <button class="w-100 h-50 bg-blue-300 hover:bg-blue-800 text-white font-bold text-7xl leading-relaxed rounded-xl inline-block" id="home">
+                    <a href="./form.html" class="flex items-center" >
+                        <span class="inline">RESERVE A SPOT NOW!!!</span> 
+                    </a>
+                </button>
+            </div>
+
+            <!-- 
+                Heading for the page, positioned absolutely at the top of the page.
+                The heading has white text and a bold font.
+                The heading has a font size of 7xl.
+                The heading has padding of 4 units.
+            -->
+            <div class="absolute inset-x-0 top-0 flex justify-center">
+                <div class=" text-white font-bold text-7xl p-4">
+                    <p class="text-7xl">St.Margaret's Bay Natural Burial Ground </p>
+                </div>
+
+                <!-- 
+                    Audio elements for playing welcome message and error message.
+                    The audio elements have IDs of "audio1" and "audio2", respectively.
+                -->
+                <audio id="audio1" >
+                    <source src="./asssets/Welcome Mary Ann 2.wav" type="audio/WAV">
+                </audio>
+                <audio id="audio2" >
+                    <source src="./asssets/This is error code 404 gr 2.wav" type="audio/WAV">
+                </audio>
+            </div>
+        </div>
+    </body>
+</html>
